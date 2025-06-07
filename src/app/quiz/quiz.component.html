@@ -1,0 +1,98 @@
+<div class="quiz-container">
+  <!-- Quiz Selection View -->
+  <div *ngIf="!currentQuiz" class="quiz-selection">
+    <h2>Available Quizzes</h2>
+    <div class="quiz-grid">
+      <mat-card *ngFor="let quiz of availableQuizzes" class="quiz-card" (click)="selectQuiz(quiz)">
+        <mat-card-header>
+          <mat-card-title>{{quiz.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{quiz.description}}</p>
+          <p class="questions-count">{{quiz.questions.length}} questions</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Quiz View -->
+  <div *ngIf="currentQuiz && !isQuizCompleted" class="quiz-view">
+    <div class="quiz-header">
+      <h2>{{currentQuiz.name}}</h2>
+      <mat-progress-bar [value]="progress"></mat-progress-bar>
+      <p class="progress-text">Question {{currentQuestionIndex + 1}} of {{currentQuiz.questions.length}}</p>
+    </div>
+
+    <div *ngIf="currentQuestion" class="question-container">
+      <h3>{{currentQuestion.title}}</h3>
+      
+      <img *ngIf="currentQuestion.imageUrl" 
+           [src]="currentQuestion.imageUrl" 
+           [alt]="currentQuestion.title"
+           class="question-image">
+
+      <div class="answers-grid">
+        <button *ngFor="let answer of currentQuestion.answers"
+                (click)="selectAnswer(answer.id)"
+                [class.selected]="selectedAnswerId === answer.id"
+                [class.correct]="isAnswerSubmitted && answer.id === currentQuestion.correctAnswerId"
+                [class.incorrect]="isAnswerSubmitted && selectedAnswerId === answer.id && answer.id !== currentQuestion.correctAnswerId"
+                [disabled]="isAnswerSubmitted"
+                mat-button>
+          {{answer.text}}
+        </button>
+      </div>
+
+      <div class="hint-section" *ngIf="currentQuestion.hint">
+        <button mat-button (click)="showHint = !showHint" class="hint-button">
+          <mat-icon>lightbulb</mat-icon>
+          {{showHint ? 'Hide Hint' : 'Show Hint'}}
+        </button>
+        <p *ngIf="showHint" class="hint-text">{{currentQuestion.hint}}</p>
+      </div>
+
+      <div class="navigation-buttons">
+        <button mat-button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">
+          <mat-icon>arrow_back</mat-icon> Previous
+        </button>
+        
+        <button *ngIf="!isAnswerSubmitted" 
+                mat-raised-button 
+                color="primary"
+                (click)="checkAnswer()"
+                [disabled]="selectedAnswerId === null">
+          Check Answer
+        </button>
+        
+        <button *ngIf="isAnswerSubmitted"
+                mat-raised-button 
+                color="primary"
+                (click)="nextQuestion()">
+          {{currentQuestionIndex === currentQuiz.questions.length - 1 ? 'Finish Quiz' : 'Next Question'}}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Completion View -->
+  <div *ngIf="isQuizCompleted && currentQuiz" class="completion-view">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Quiz Completed!</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="score-display">
+          <div class="score-circle">
+            <span class="score-percentage">{{scorePercentage | number:'1.0-0'}}%</span>
+            <span class="score-text">Score</span>
+          </div>
+          <p class="score-details">You got {{score}} out of {{currentQuiz.questions.length}} questions correct.</p>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="resetQuiz()">Try Again</button>
+        <button mat-button (click)="goBackToPractice()">Back to Practice</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div> 

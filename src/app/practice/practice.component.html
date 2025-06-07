@@ -1,0 +1,25 @@
+<div class="practice-container">
+  <div class="practice-header">
+    <h1>Practice Problems</h1>
+    <div class="difficulty-filter">
+      <button *ngFor="let level of difficultyLevels"
+              [class.active]="currentDifficulty === level"
+              (click)="currentDifficulty = level">
+        {{level}}
+      </button>
+    </div>
+  </div>
+
+  <div class="problems-grid">
+    <div *ngFor="let problem of filteredProblems" class="problem-card">
+      <h3>{{problem.title}}</h3>
+      <div class="difficulty-badge" [class]="problem.difficulty.toLowerCase()">
+        {{problem.difficulty}}
+      </div>
+      <p>{{problem.description}}</p>
+      <button class="start-button" (click)="startSolving(problem.quizId)">
+        Start Solving
+      </button>
+    </div>
+  </div>
+</div> 

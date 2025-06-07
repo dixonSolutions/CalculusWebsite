@@ -1,0 +1,63 @@
+<div class="home-container">
+  <div class="hero-section">
+    <div class="carousel" (mouseenter)="onSlideHover(true)" (mouseleave)="onSlideHover(false)">
+      <div class="carousel-content" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+        <div class="carousel-slide" *ngFor="let slide of slides">
+          <div class="slide-image" [style.backgroundImage]="'url(' + slide.imageUrl + ')'"></div>
+          <div class="slide-text">
+            <h2>{{slide.title}}</h2>
+            <p>{{slide.description}}</p>
+            <button mat-raised-button color="primary" *ngIf="slide.buttonText" [routerLink]="slide.buttonLink">
+              {{slide.buttonText}}
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <button mat-icon-button class="carousel-nav prev" (click)="previousSlide()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button mat-icon-button class="carousel-nav next" (click)="nextSlide()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+      
+      <div class="carousel-dots">
+        <button class="dot" *ngFor="let slide of slides; let i = index" 
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <mat-card>
+      <mat-card-content>
+        <h2>Why Learn With Us?</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <mat-icon>school</mat-icon>
+            <h3>Structured Learning</h3>
+            <p>Progress through carefully designed lessons that build upon each other.</p>
+          </div>
+          <div class="feature">
+            <mat-icon>psychology</mat-icon>
+            <h3>Interactive Practice</h3>
+            <p>Reinforce your understanding with hands-on exercises and quizzes.</p>
+          </div>
+          <div class="feature">
+            <mat-icon>auto_stories</mat-icon>
+            <h3>Rich Content</h3>
+            <p>Learn with visual aids, step-by-step solutions, and detailed explanations.</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="cta-section">
+    <button mat-raised-button color="primary" routerLink="/lessons">
+      Start Learning Now
+    </button>
+  </div>
+</div> 

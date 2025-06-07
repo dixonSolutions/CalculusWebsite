@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+router-outlet {
+  display: block;
+  margin-top: 64px;
+} 

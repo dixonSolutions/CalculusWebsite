@@ -1,0 +1,45 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Global styles */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Custom theme colors */
+:root {
+  --primary-color: #1e3c72;
+  --secondary-color: #2a5298;
+  --accent-color: #e3f2fd;
+  --text-color: #333;
+  --background-color: #f8f9fa;
+}
+
+/* Global Material overrides */
+.mat-mdc-card {
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.mat-mdc-button {
+  border-radius: 4px !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.mat-mdc-icon {
+  color: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: #1e3c72;
+  --mdc-linear-progress-track-color: #e3f2fd;
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: #2a5298;
+} 

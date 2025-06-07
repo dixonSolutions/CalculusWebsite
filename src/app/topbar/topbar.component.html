@@ -1,0 +1,13 @@
+<nav class="topbar">
+  <div class="logo">
+    <a routerLink="/">Calculus Learning</a>
+  </div>
+  <div class="nav-links">
+    <a *ngFor="let item of navItems" 
+       [routerLink]="item.link"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: item.link === '/'}">
+      {{item.label}}
+    </a>
+  </div>
+</nav> 

@@ -1,0 +1,53 @@
+<div class="about-container">
+  <section class="mission-section">
+    <mat-card>
+      <mat-card-content>
+        <h1>{{mission.title}}</h1>
+        <p class="mission-text">{{mission.description}}</p>
+        <div class="values-grid">
+          <div class="value" *ngFor="let value of mission.values">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{value}}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section class="features-section">
+    <h2>What We Offer</h2>
+    <div class="features-grid">
+      <mat-card class="feature-card" *ngFor="let feature of features">
+        <mat-card-content>
+          <mat-icon>{{feature.icon}}</mat-icon>
+          <h3>{{feature.title}}</h3>
+          <p>{{feature.description}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <mat-card class="team-card" *ngFor="let member of team">
+        <mat-card-content>
+          <div class="member-image" [style.backgroundImage]="'url(' + member.imageUrl + ')'"></div>
+          <h3>{{member.name}}</h3>
+          <h4>{{member.role}}</h4>
+          <p>{{member.bio}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <mat-card>
+      <mat-card-content>
+        <h2>Get in Touch</h2>
+        <p>Have questions or suggestions? We'd love to hear from you!</p>
+        <button mat-raised-button color="primary">Contact Us</button>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div> 

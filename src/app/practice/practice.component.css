@@ -1,0 +1,114 @@
+.practice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.practice-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+}
+
+.difficulty-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.difficulty-filter button {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #2a5298;
+  border-radius: 6px;
+  background: transparent;
+  color: #2a5298;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.difficulty-filter button:hover {
+  background: rgba(42, 82, 152, 0.1);
+}
+
+.difficulty-filter button.active {
+  background: #2a5298;
+  color: white;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.problem-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-4px);
+}
+
+.problem-card h3 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  padding-right: 80px;
+}
+
+.difficulty-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.difficulty-badge.easy {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.difficulty-badge.medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.difficulty-badge.hard {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.problem-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.start-button {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.start-button:hover {
+  opacity: 0.9;
+} 
