@@ -7,6 +7,25 @@
       "handle": "filesystem"
     },
     {
+      "src": "/manifest.webmanifest",
+      "headers": {
+        "Content-Type": "application/manifest+json"
+      }
+    },
+    {
+      "src": "/ngsw-worker.js",
+      "headers": {
+        "Content-Type": "application/javascript",
+        "Service-Worker-Allowed": "/"
+      }
+    },
+    {
+      "src": "/ngsw.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },
