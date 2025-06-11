@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import posthog from 'posthog-js';
+
+declare global {
+  interface Window {
+    posthog: any;
+  }
+}
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +12,19 @@ import posthog from 'posthog-js';
 export class PosthogService {
   constructor() {}
 
+  private get posthog() {
+    return window.posthog;
+  }
+
   /**
    * Capture a custom event
    * @param eventName Name of the event
    * @param properties Optional properties to include with the event
    */
   capture(eventName: string, properties?: Record<string, any>) {
-    posthog.capture(eventName, properties);
+    if (this.posthog) {
+      this.posthog.capture(eventName, properties);
+    }
   }
 
   /**
@@ -22,14 +33,18 @@ export class PosthogService {
    * @param properties Optional user properties
    */
   identify(distinctId: string, properties?: Record<string, any>) {
-    posthog.identify(distinctId, properties);
+    if (this.posthog) {
+      this.posthog.identify(distinctId, properties);
+    }
   }
 
   /**
    * Reset the current user
    */
   reset() {
-    posthog.reset();
+    if (this.posthog) {
+      this.posthog.reset();
+    }
   }
 
   /**
@@ -38,10 +53,19 @@ export class PosthogService {
    * @param once Only register the properties if they haven't been registered before
    */
   register(properties: Record<string, any>, once = false) {
-    if (once) {
-      posthog.register_once(properties);
-    } else {
-      posthog.register(properties);
+    if (this.posthog) {
+      if (once) {
+        this.posthog.register_once(properties);
+      } else {
+        this.posthog.register(properties);
+      }
     }
+  }
+
+  /**
+   * Check if PostHog is loaded and available
+   */
+  isLoaded(): boolean {
+    return !!this.posthog;
   }
 } 
