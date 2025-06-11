@@ -1,11 +1,13 @@
 {
-  "name": "calculus",
-  "short_name": "calculus",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Master Calculus - Learn Calculus Step by Step",
+  "short_name": "Master Calculus",
+  "description": "Learn calculus with structured lessons, interactive practice, and clear explanations. Master Newton's method, derivatives, integrals and more.",
+  "theme_color": "#4338ca",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "categories": ["education", "productivity"],
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
