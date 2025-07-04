@@ -1,0 +1,161 @@
+<div class="lessons-container">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-container">
+    <mat-card class="loading-card">
+      <mat-card-content>
+        <div class="loading-content">
+          <mat-icon class="loading-icon">sync</mat-icon>
+          <h2>Loading Lessons...</h2>
+          <p>Please wait while we fetch your lessons from the database.</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="!loading && error" class="error-container">
+    <mat-card class="error-card">
+      <mat-card-content>
+        <div class="error-content">
+          <mat-icon class="error-icon">error</mat-icon>
+          <h2>Error Loading Lessons</h2>
+          <p>{{error}}</p>
+          <button mat-raised-button color="primary" (click)="refreshLessons()">
+            <mat-icon>refresh</mat-icon>
+            Try Again
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Main Content (only show when not loading and no error) -->
+  <div *ngIf="!loading && !error" class="main-content">
+    <div class="lessons-tree-container">
+      <div class="tree-header">
+        <h3>Calculus Lessons</h3>
+        <button mat-icon-button (click)="refreshLessons()" 
+                matTooltip="Refresh lessons from database">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+      
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <!-- Section node -->
+        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+          <div class="mat-tree-node">
+            <button mat-icon-button matTreeNodeToggle
+                    [attr.aria-label]="'Toggle ' + node.name">
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
+            <span class="section-title">{{node.name}}</span>
+            <div class="section-description" *ngIf="node.description">
+              {{node.description}}
+            </div>
+          </div>
+          <div class="mat-tree-node-children" [class.example-tree-invisible]="!treeControl.isExpanded(node)">
+            <ng-container matTreeNodeOutlet></ng-container>
+          </div>
+        </mat-nested-tree-node>
+
+        <!-- Lesson node -->
+        <mat-tree-node *matTreeNodeDef="let node">
+          <div class="lesson-node" 
+               [class.active]="selectedLesson?.id === node.id"
+               (click)="selectLesson(node)">
+            <mat-icon class="lesson-icon">school</mat-icon>
+            <span class="lesson-title">{{node.name}}</span>
+            <span class="lesson-id" *ngIf="node.id">#{{node.id}}</span>
+          </div>
+        </mat-tree-node>
+      </mat-tree>
+    </div>
+
+    <div class="lesson-content">
+      <ng-container *ngIf="selectedLesson; else welcomeMessage">
+        <div class="lesson-header">
+          <h2>{{selectedLesson.name}}</h2>
+          <p *ngIf="selectedLesson.description" class="lesson-description">
+            {{selectedLesson.description}}
+          </p>
+        </div>
+
+        <div class="slides-container" *ngIf="currentSlide">
+          <div class="slide-navigation">
+            <button mat-icon-button 
+                    [disabled]="currentSlideIndex === 0"
+                    (click)="previousSlide()">
+              <mat-icon>navigate_before</mat-icon>
+            </button>
+            <span class="slide-counter">
+              Slide {{currentSlideIndex + 1}} of {{selectedLesson.slides?.length}}
+            </span>
+            <button mat-icon-button 
+                    [disabled]="!selectedLesson.slides || currentSlideIndex === selectedLesson.slides.length - 1"
+                    (click)="nextSlide()">
+              <mat-icon>navigate_next</mat-icon>
+            </button>
+          </div>
+
+          <mat-card class="slide-card">
+            <mat-card-header>
+              <mat-card-title>{{currentSlide.title}}</mat-card-title>
+            </mat-card-header>
+            
+            <mat-card-content>
+              <p class="slide-content">{{currentSlide.content}}</p>
+              
+              <div class="slide-images" *ngIf="currentSlide.images && currentSlide.images.length > 0">
+                <div *ngFor="let image of currentSlide.images" class="image-container">
+                  <img [src]="image.url" [alt]="image.caption" class="slide-image">
+                  <p class="image-caption">{{image.caption}}</p>
+                </div>
+              </div>
+
+              <div class="examples-section" *ngIf="currentSlide.examples && currentSlide.examples.length > 0">
+                <h3>Examples:</h3>
+                <mat-list>
+                  <mat-list-item *ngFor="let example of currentSlide.examples">
+                    <mat-icon matListItemIcon>arrow_right</mat-icon>
+                    <span matListItemTitle>{{example}}</span>
+                  </mat-list-item>
+                </mat-list>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <div class="lesson-actions">
+            <button mat-raised-button color="primary" 
+                    *ngIf="selectedLesson.quizIds && selectedLesson.quizIds.length > 0"
+                    (click)="startQuiz()">
+              <mat-icon>quiz</mat-icon>
+              Take Quiz
+            </button>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-template #welcomeMessage>
+        <mat-card class="welcome-card">
+          <mat-card-content>
+            <mat-icon class="welcome-icon">menu_book</mat-icon>
+            <h2>Welcome to Calculus Lessons!</h2>
+            <p>Start your learning journey by selecting a lesson from the menu on the left.</p>
+            <p>Our lessons are organized by topics, making it easy to find what you want to learn.</p>
+            <div class="welcome-tips">
+              <h3>Quick Tips:</h3>
+              <ul>
+                <li>Click on a section to expand it</li>
+                <li>Select any lesson to start learning</li>
+                <li>Use the navigation arrows to move between slides</li>
+                <li>Take quizzes to test your knowledge</li>
+              </ul>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </ng-template>
+    </div>
+  </div>
+</div> 

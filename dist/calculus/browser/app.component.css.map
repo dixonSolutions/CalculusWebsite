@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;50892118fc59528085c9302e48b08b116f84bd7c89d8fd16eaa3ff5739141644;C:/Users/user/.cursor/calculus/calculus/src/app/app.component.ts"],
+  "sourcesContent": ["\n    :host {\n      display: block;\n      min-height: 100vh;\n    }\n    .main-container {\n      min-height: 100vh;\n    }\n    .content {\n      padding-top: 64px; /* Height of the toolbar */\n      min-height: calc(100vh - 64px);\n      background-color: #f8f9fa;\n    }\n    .mobile-sidenav {\n      width: 250px;\n      background: #4338ca;\n      color: white;\n    }\n  "],
+  "mappings": ";AACI;AACE,WAAS;AACT,cAAY;AACd;AACA,CAAC;AACC,cAAY;AACd;AACA,CAAC;AACC,eAAa;AACb,cAAY,KAAK,MAAM,EAAE;AACzB,oBAAkB;AACpB;AACA,CAAC;AACC,SAAO;AACP,cAAY;AACZ,SAAO;AACT;",
+  "names": []
+}

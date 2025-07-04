@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;310037ea9dd650ae4bd4292a9368cf341634bd01ea7841634b21fa278725c92e;C:/Users/user/.cursor/calculus/calculus/src/app/about/about.component.ts"],
+  "sourcesContent": ["\n    .about-container {\n      padding: 2rem;\n      max-width: 800px;\n      margin: 0 auto;\n    }\n\n    h1 {\n      color: #202124;\n      text-align: center;\n      margin-bottom: 2rem;\n    }\n\n    .about-card {\n      padding: 2rem;\n    }\n\n    h2 {\n      color: #1a73e8;\n      margin-top: 2rem;\n      margin-bottom: 1rem;\n    }\n\n    h2:first-child {\n      margin-top: 0;\n    }\n\n    p {\n      color: #5f6368;\n      line-height: 1.6;\n      margin-bottom: 1.5rem;\n    }\n\n    ul {\n      color: #5f6368;\n      line-height: 1.6;\n      margin-bottom: 1.5rem;\n      padding-left: 1.5rem;\n    }\n\n    li {\n      margin-bottom: 0.5rem;\n    }\n  "],
+  "mappings": ";AACI,CAAC;AACC,WAAS;AACT,aAAW;AACX,UAAQ,EAAE;AACZ;AAEA;AACE,SAAO;AACP,cAAY;AACZ,iBAAe;AACjB;AAEA,CAAC;AACC,WAAS;AACX;AAEA;AACE,SAAO;AACP,cAAY;AACZ,iBAAe;AACjB;AAEA,EAAE;AACA,cAAY;AACd;AAEA;AACE,SAAO;AACP,eAAa;AACb,iBAAe;AACjB;AAEA;AACE,SAAO;AACP,eAAa;AACb,iBAAe;AACf,gBAAc;AAChB;AAEA;AACE,iBAAe;AACjB;",
+  "names": []
+}

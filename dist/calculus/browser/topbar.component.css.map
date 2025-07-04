@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;88e1dec13720860274eabf16e64d8982d2ec79045372d72ec0397e50b86be50d;C:/Users/user/.cursor/calculus/calculus/src/app/topbar/topbar.component.ts"],
+  "sourcesContent": ["\n    .spacer {\n      flex: 1 1 auto;\n    }\n    .title {\n      font-size: 1.5rem;\n      font-weight: 500;\n    }\n    .active {\n      background-color: rgba(255, 255, 255, 0.1);\n      font-weight: 500;\n    }\n    mat-toolbar {\n      position: fixed;\n      top: 0;\n      z-index: 1000;\n    }\n    .desktop-nav {\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n    .mobile-menu-btn {\n      display: none;\n      color: white;\n    }\n    @media (max-width: 768px) {\n      .desktop-nav {\n        display: none;\n      }\n      .mobile-menu-btn {\n        display: inline-flex;\n      }\n      .title {\n        font-size: 1.2rem;\n      }\n    }\n  "],
+  "mappings": ";AACI,CAAC;AACC,QAAM,EAAE,EAAE;AACZ;AACA,CAAC;AACC,aAAW;AACX,eAAa;AACf;AACA,CAAC;AACC,oBAAkB,KAAK,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE;AACtC,eAAa;AACf;AACA;AACE,YAAU;AACV,OAAK;AACL,WAAS;AACX;AACA,CAAC;AACC,WAAS;AACT,eAAa;AACb,OAAK;AACP;AACA,CAAC;AACC,WAAS;AACT,SAAO;AACT;AACA,OAAO,CAAC,SAAS,EAAE;AACjB,GAVD;AAWG,aAAS;AACX;AACA,GARD;AASG,aAAS;AACX;AACA,GA7BD;AA8BG,eAAW;AACb;AACF;",
+  "names": []
+}

@@ -3,7 +3,7 @@ import {
   browser_default,
   browser_exports,
   init_browser
-} from "./chunk-RY5IUC4G.js";
+} from "./chunk-OV4ISWI3.js";
 import {
   __async,
   __commonJS,
@@ -11,9 +11,9 @@ import {
   __toESM
 } from "./chunk-S35DAJRX.js";
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestError.js
+// node_modules/@supabase/postgrest-js/dist/cjs/PostgrestError.js
 var require_PostgrestError = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestError.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/PostgrestError.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var PostgrestError2 = class extends Error {
@@ -29,9 +29,9 @@ var require_PostgrestError = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestBuilder.js
+// node_modules/@supabase/postgrest-js/dist/cjs/PostgrestBuilder.js
 var require_PostgrestBuilder = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestBuilder.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/PostgrestBuilder.js"(exports) {
     "use strict";
     var __importDefault = exports && exports.__importDefault || function(mod) {
       return mod && mod.__esModule ? mod : { "default": mod };
@@ -231,9 +231,9 @@ var require_PostgrestBuilder = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestTransformBuilder.js
+// node_modules/@supabase/postgrest-js/dist/cjs/PostgrestTransformBuilder.js
 var require_PostgrestTransformBuilder = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestTransformBuilder.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/PostgrestTransformBuilder.js"(exports) {
     "use strict";
     var __importDefault = exports && exports.__importDefault || function(mod) {
       return mod && mod.__esModule ? mod : { "default": mod };
@@ -446,9 +446,9 @@ var require_PostgrestTransformBuilder = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestFilterBuilder.js
+// node_modules/@supabase/postgrest-js/dist/cjs/PostgrestFilterBuilder.js
 var require_PostgrestFilterBuilder = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestFilterBuilder.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/PostgrestFilterBuilder.js"(exports) {
     "use strict";
     var __importDefault = exports && exports.__importDefault || function(mod) {
       return mod && mod.__esModule ? mod : { "default": mod };
@@ -812,9 +812,9 @@ var require_PostgrestFilterBuilder = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestQueryBuilder.js
+// node_modules/@supabase/postgrest-js/dist/cjs/PostgrestQueryBuilder.js
 var require_PostgrestQueryBuilder = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestQueryBuilder.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/PostgrestQueryBuilder.js"(exports) {
     "use strict";
     var __importDefault = exports && exports.__importDefault || function(mod) {
       return mod && mod.__esModule ? mod : { "default": mod };
@@ -1084,9 +1084,9 @@ var require_PostgrestQueryBuilder = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/version.js
+// node_modules/@supabase/postgrest-js/dist/cjs/version.js
 var require_version = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/version.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/version.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.version = void 0;
@@ -1094,9 +1094,9 @@ var require_version = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/constants.js
+// node_modules/@supabase/postgrest-js/dist/cjs/constants.js
 var require_constants = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/constants.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/constants.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.DEFAULT_HEADERS = void 0;
@@ -1105,9 +1105,9 @@ var require_constants = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestClient.js
+// node_modules/@supabase/postgrest-js/dist/cjs/PostgrestClient.js
 var require_PostgrestClient = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/PostgrestClient.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/PostgrestClient.js"(exports) {
     "use strict";
     var __importDefault = exports && exports.__importDefault || function(mod) {
       return mod && mod.__esModule ? mod : { "default": mod };
@@ -1215,9 +1215,9 @@ var require_PostgrestClient = __commonJS({
   }
 });
 
-// ../node_modules/@supabase/postgrest-js/dist/cjs/index.js
+// node_modules/@supabase/postgrest-js/dist/cjs/index.js
 var require_cjs = __commonJS({
-  "../node_modules/@supabase/postgrest-js/dist/cjs/index.js"(exports) {
+  "node_modules/@supabase/postgrest-js/dist/cjs/index.js"(exports) {
     "use strict";
     var __importDefault = exports && exports.__importDefault || function(mod) {
       return mod && mod.__esModule ? mod : { "default": mod };
@@ -1247,32 +1247,20 @@ var require_cjs = __commonJS({
   }
 });
 
-// ../node_modules/ws/browser.js
-var require_browser = __commonJS({
-  "../node_modules/ws/browser.js"(exports, module) {
-    "use strict";
-    module.exports = function() {
-      throw new Error(
-        "ws does not work in the browser. Browser clients must use the native WebSocket object"
-      );
-    };
-  }
-});
-
-// ../node_modules/@supabase/functions-js/dist/module/helper.js
+// node_modules/@supabase/functions-js/dist/module/helper.js
 var resolveFetch = (customFetch) => {
   let _fetch;
   if (customFetch) {
     _fetch = customFetch;
   } else if (typeof fetch === "undefined") {
-    _fetch = (...args) => import("./browser-X5MESSKR.js").then(({ default: fetch2 }) => fetch2(...args));
+    _fetch = (...args) => import("./browser-XRNNNWJB.js").then(({ default: fetch2 }) => fetch2(...args));
   } else {
     _fetch = fetch;
   }
   return (...args) => _fetch(...args);
 };
 
-// ../node_modules/@supabase/functions-js/dist/module/types.js
+// node_modules/@supabase/functions-js/dist/module/types.js
 var FunctionsError = class extends Error {
   constructor(message, name = "FunctionsError", context) {
     super(message);
@@ -1314,7 +1302,7 @@ var FunctionRegion;
   FunctionRegion2["UsWest2"] = "us-west-2";
 })(FunctionRegion || (FunctionRegion = {}));
 
-// ../node_modules/@supabase/functions-js/dist/module/FunctionsClient.js
+// node_modules/@supabase/functions-js/dist/module/FunctionsClient.js
 var __awaiter = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -1371,8 +1359,10 @@ var FunctionsClient = class {
         if (!region) {
           region = this.region;
         }
+        const url = new URL(`${this.url}/${functionName}`);
         if (region && region !== "any") {
           _headers["x-region"] = region;
+          url.searchParams.set("forceFunctionRegion", region);
         }
         let body;
         if (functionArgs && (headers && !Object.prototype.hasOwnProperty.call(headers, "Content-Type") || !headers)) {
@@ -1389,7 +1379,7 @@ var FunctionsClient = class {
             body = JSON.stringify(functionArgs);
           }
         }
-        const response = yield this.fetch(`${this.url}/${functionName}`, {
+        const response = yield this.fetch(url.toString(), {
           method: method || "POST",
           // headers priority is (high to low):
           // 1. invoke-level headers
@@ -1420,15 +1410,19 @@ var FunctionsClient = class {
         } else {
           data = yield response.text();
         }
-        return { data, error: null };
+        return { data, error: null, response };
       } catch (error) {
-        return { data: null, error };
+        return {
+          data: null,
+          error,
+          response: error instanceof FunctionsHttpError || error instanceof FunctionsRelayError ? error.context : void 0
+        };
       }
     });
   }
 };
 
-// ../node_modules/@supabase/postgrest-js/dist/esm/wrapper.mjs
+// node_modules/@supabase/postgrest-js/dist/esm/wrapper.mjs
 var import_cjs = __toESM(require_cjs(), 1);
 var {
   PostgrestClient,
@@ -1439,20 +1433,27 @@ var {
   PostgrestError
 } = import_cjs.default;
 
-// ../node_modules/@supabase/realtime-js/dist/module/WebSocket.js
-var WebSocketImpl;
-if (typeof window === "undefined") {
-  WebSocketImpl = require_browser();
-} else {
-  WebSocketImpl = window.WebSocket;
+// node_modules/isows/_esm/utils.js
+function getNativeWebSocket() {
+  if (typeof WebSocket !== "undefined")
+    return WebSocket;
+  if (typeof global.WebSocket !== "undefined")
+    return global.WebSocket;
+  if (typeof window.WebSocket !== "undefined")
+    return window.WebSocket;
+  if (typeof self.WebSocket !== "undefined")
+    return self.WebSocket;
+  throw new Error("`WebSocket` is not supported in this environment");
 }
-var WebSocket_default = WebSocketImpl;
 
-// ../node_modules/@supabase/realtime-js/dist/module/lib/version.js
-var version = "2.11.10";
+// node_modules/isows/_esm/native.js
+var WebSocket2 = getNativeWebSocket();
 
-// ../node_modules/@supabase/realtime-js/dist/module/lib/constants.js
-var DEFAULT_HEADERS = { "X-Client-Info": `realtime-js/${version}` };
+// node_modules/@supabase/realtime-js/dist/module/lib/version.js
+var version = "2.11.15";
+
+// node_modules/@supabase/realtime-js/dist/module/lib/constants.js
+var DEFAULT_VERSION = `realtime-js/${version}`;
 var VSN = "1.0.0";
 var DEFAULT_TIMEOUT = 1e4;
 var WS_CLOSE_NORMAL = 1e3;
@@ -1492,7 +1493,7 @@ var CONNECTION_STATE;
   CONNECTION_STATE2["Closed"] = "closed";
 })(CONNECTION_STATE || (CONNECTION_STATE = {}));
 
-// ../node_modules/@supabase/realtime-js/dist/module/lib/serializer.js
+// node_modules/@supabase/realtime-js/dist/module/lib/serializer.js
 var Serializer = class {
   constructor() {
     this.HEADER_LENGTH = 1;
@@ -1524,7 +1525,7 @@ var Serializer = class {
   }
 };
 
-// ../node_modules/@supabase/realtime-js/dist/module/lib/timer.js
+// node_modules/@supabase/realtime-js/dist/module/lib/timer.js
 var Timer = class {
   constructor(callback, timerCalc) {
     this.callback = callback;
@@ -1548,7 +1549,7 @@ var Timer = class {
   }
 };
 
-// ../node_modules/@supabase/realtime-js/dist/module/lib/transformers.js
+// node_modules/@supabase/realtime-js/dist/module/lib/transformers.js
 var PostgresTypes;
 (function(PostgresTypes2) {
   PostgresTypes2["abstime"] = "abstime";
@@ -1697,7 +1698,7 @@ var httpEndpointURL = (socketUrl) => {
   return url.replace(/\/+$/, "");
 };
 
-// ../node_modules/@supabase/realtime-js/dist/module/lib/push.js
+// node_modules/@supabase/realtime-js/dist/module/lib/push.js
 var Push = class {
   /**
    * Initializes the Push
@@ -1796,7 +1797,7 @@ var Push = class {
   }
 };
 
-// ../node_modules/@supabase/realtime-js/dist/module/RealtimePresence.js
+// node_modules/@supabase/realtime-js/dist/module/RealtimePresence.js
 var REALTIME_PRESENCE_LISTEN_EVENTS;
 (function(REALTIME_PRESENCE_LISTEN_EVENTS2) {
   REALTIME_PRESENCE_LISTEN_EVENTS2["SYNC"] = "sync";
@@ -2019,7 +2020,7 @@ var RealtimePresence = class _RealtimePresence {
   }
 };
 
-// ../node_modules/@supabase/realtime-js/dist/module/RealtimeChannel.js
+// node_modules/@supabase/realtime-js/dist/module/RealtimeChannel.js
 var REALTIME_POSTGRES_CHANGES_LISTEN_EVENT;
 (function(REALTIME_POSTGRES_CHANGES_LISTEN_EVENT2) {
   REALTIME_POSTGRES_CHANGES_LISTEN_EVENT2["ALL"] = "*";
@@ -2101,9 +2102,7 @@ var RealtimeChannel = class _RealtimeChannel {
     if (!this.socket.isConnected()) {
       this.socket.connect();
     }
-    if (this.joinedOnce) {
-      throw `tried to subscribe multiple times. 'subscribe' can only be called a single time per channel instance`;
-    } else {
+    if (this.state == CHANNEL_STATES.closed) {
       const { config: { broadcast, presence, private: isPrivate } } = this.params;
       this._onError((e) => callback === null || callback === void 0 ? void 0 : callback(REALTIME_SUBSCRIBE_STATES.CHANNEL_ERROR, e));
       this._onClose(() => callback === null || callback === void 0 ? void 0 : callback(REALTIME_SUBSCRIBE_STATES.CLOSED));
@@ -2258,8 +2257,9 @@ var RealtimeChannel = class _RealtimeChannel {
       this._trigger(CHANNEL_EVENTS.close, "leave", this._joinRef());
     };
     this.joinPush.destroy();
+    let leavePush = null;
     return new Promise((resolve) => {
-      const leavePush = new Push(this, CHANNEL_EVENTS.leave, {}, timeout);
+      leavePush = new Push(this, CHANNEL_EVENTS.leave, {}, timeout);
       leavePush.receive("ok", () => {
         onClose();
         resolve("ok");
@@ -2273,6 +2273,8 @@ var RealtimeChannel = class _RealtimeChannel {
       if (!this._canPush()) {
         leavePush.trigger("ok", {});
       }
+    }).finally(() => {
+      leavePush === null || leavePush === void 0 ? void 0 : leavePush.destroy();
     });
   }
   /**
@@ -2492,7 +2494,7 @@ var RealtimeChannel = class _RealtimeChannel {
   }
 };
 
-// ../node_modules/@supabase/realtime-js/dist/module/RealtimeClient.js
+// node_modules/@supabase/realtime-js/dist/module/RealtimeClient.js
 var noop2 = () => {
 };
 var WORKER_SCRIPT = `
@@ -2510,7 +2512,7 @@ var RealtimeClient = class {
    * @param options.transport The Websocket Transport, for example WebSocket. This can be a custom implementation
    * @param options.timeout The default timeout in milliseconds to trigger push timeouts.
    * @param options.params The optional params to pass when connecting.
-   * @param options.headers The optional headers to pass when connecting.
+   * @param options.headers Deprecated: headers cannot be set on websocket connections and this option will be removed in the future.
    * @param options.heartbeatIntervalMs The millisec interval to send a heartbeat message.
    * @param options.logger The optional function for specialized logging, ie: logger: (kind, msg, data) => { console.log(`${kind}: ${msg}`, data) }
    * @param options.logLevel Sets the log level for Realtime
@@ -2527,7 +2529,7 @@ var RealtimeClient = class {
     this.channels = new Array();
     this.endPoint = "";
     this.httpEndpoint = "";
-    this.headers = DEFAULT_HEADERS;
+    this.headers = {};
     this.params = {};
     this.timeout = DEFAULT_TIMEOUT;
     this.heartbeatIntervalMs = 25e3;
@@ -2551,7 +2553,7 @@ var RealtimeClient = class {
       if (customFetch) {
         _fetch = customFetch;
       } else if (typeof fetch === "undefined") {
-        _fetch = (...args) => import("./browser-X5MESSKR.js").then(({ default: fetch2 }) => fetch2(...args));
+        _fetch = (...args) => import("./browser-XRNNNWJB.js").then(({ default: fetch2 }) => fetch2(...args));
       } else {
         _fetch = fetch;
       }
@@ -2566,8 +2568,6 @@ var RealtimeClient = class {
     }
     if (options === null || options === void 0 ? void 0 : options.params)
       this.params = options.params;
-    if (options === null || options === void 0 ? void 0 : options.headers)
-      this.headers = Object.assign(Object.assign({}, this.headers), options.headers);
     if (options === null || options === void 0 ? void 0 : options.timeout)
       this.timeout = options.timeout;
     if (options === null || options === void 0 ? void 0 : options.logger)
@@ -2612,25 +2612,13 @@ var RealtimeClient = class {
       return;
     }
     if (!this.transport) {
-      this.transport = WebSocket_default;
+      this.transport = WebSocket2;
     }
-    if (this.transport) {
-      const isBrowser2 = typeof window !== "undefined" && this.transport === window.WebSocket;
-      if (isBrowser2) {
-        this.conn = new this.transport(this.endpointURL());
-      } else {
-        this.conn = new this.transport(this.endpointURL(), void 0, {
-          headers: this.headers
-        });
-      }
-      this.setupConnection();
-      return;
+    if (!this.transport) {
+      throw new Error("No transport provided");
     }
-    this.conn = new WSWebSocketDummy(this.endpointURL(), void 0, {
-      close: () => {
-        this.conn = null;
-      }
-    });
+    this.conn = new this.transport(this.endpointURL());
+    this.setupConnection();
   }
   /**
    * Returns the URL of the websocket.
@@ -2673,7 +2661,6 @@ var RealtimeClient = class {
   removeChannel(channel) {
     return __async(this, null, function* () {
       const status = yield channel.unsubscribe();
-      this.channels = this.channels.filter((c) => c._joinRef !== channel._joinRef);
       if (this.channels.length === 0) {
         this.disconnect();
       }
@@ -2766,10 +2753,11 @@ var RealtimeClient = class {
       if (this.accessTokenValue != tokenToSend) {
         this.accessTokenValue = tokenToSend;
         this.channels.forEach((channel) => {
-          tokenToSend && channel.updateJoinPayload({
+          const payload = {
             access_token: tokenToSend,
-            version: this.headers && this.headers["X-Client-Info"]
-          });
+            version: DEFAULT_VERSION
+          };
+          tokenToSend && channel.updateJoinPayload(payload);
           if (channel.joinedOnce && channel._isJoined()) {
             channel._push(CHANNEL_EVENTS.access_token, {
               access_token: tokenToSend
@@ -2890,31 +2878,41 @@ var RealtimeClient = class {
     this.flushSendBuffer();
     this.reconnectTimer.reset();
     if (!this.worker) {
-      this.heartbeatTimer && clearInterval(this.heartbeatTimer);
-      this.heartbeatTimer = setInterval(() => this.sendHeartbeat(), this.heartbeatIntervalMs);
+      this._startHeartbeat();
     } else {
-      if (this.workerUrl) {
-        this.log("worker", `starting worker for from ${this.workerUrl}`);
-      } else {
-        this.log("worker", `starting default worker`);
+      if (!this.workerRef) {
+        this._startWorkerHeartbeat();
       }
-      const objectUrl = this._workerObjectUrl(this.workerUrl);
-      this.workerRef = new Worker(objectUrl);
-      this.workerRef.onerror = (error) => {
-        this.log("worker", "worker error", error.message);
-        this.workerRef.terminate();
-      };
-      this.workerRef.onmessage = (event) => {
-        if (event.data.event === "keepAlive") {
-          this.sendHeartbeat();
-        }
-      };
-      this.workerRef.postMessage({
-        event: "start",
-        interval: this.heartbeatIntervalMs
-      });
     }
     this.stateChangeCallbacks.open.forEach((callback) => callback());
+  }
+  /** @internal */
+  _startHeartbeat() {
+    this.heartbeatTimer && clearInterval(this.heartbeatTimer);
+    this.heartbeatTimer = setInterval(() => this.sendHeartbeat(), this.heartbeatIntervalMs);
+  }
+  /** @internal */
+  _startWorkerHeartbeat() {
+    if (this.workerUrl) {
+      this.log("worker", `starting worker for from ${this.workerUrl}`);
+    } else {
+      this.log("worker", `starting default worker`);
+    }
+    const objectUrl = this._workerObjectUrl(this.workerUrl);
+    this.workerRef = new Worker(objectUrl);
+    this.workerRef.onerror = (error) => {
+      this.log("worker", "worker error", error.message);
+      this.workerRef.terminate();
+    };
+    this.workerRef.onmessage = (event) => {
+      if (event.data.event === "keepAlive") {
+        this.sendHeartbeat();
+      }
+    };
+    this.workerRef.postMessage({
+      event: "start",
+      interval: this.heartbeatIntervalMs
+    });
   }
   /** @internal */
   _onConnClose(event) {
@@ -2926,7 +2924,7 @@ var RealtimeClient = class {
   }
   /** @internal */
   _onConnError(error) {
-    this.log("transport", error.message);
+    this.log("transport", `${error}`);
     this._triggerChanError();
     this.stateChangeCallbacks.error.forEach((callback) => callback(error));
   }
@@ -2954,27 +2952,8 @@ var RealtimeClient = class {
     return result_url;
   }
 };
-var WSWebSocketDummy = class {
-  constructor(address, _protocols, options) {
-    this.binaryType = "arraybuffer";
-    this.onclose = () => {
-    };
-    this.onerror = () => {
-    };
-    this.onmessage = () => {
-    };
-    this.onopen = () => {
-    };
-    this.readyState = SOCKET_STATES.connecting;
-    this.send = () => {
-    };
-    this.url = null;
-    this.url = address;
-    this.close = options.close;
-  }
-};
 
-// ../node_modules/@supabase/storage-js/dist/module/lib/errors.js
+// node_modules/@supabase/storage-js/dist/module/lib/errors.js
 var StorageError = class extends Error {
   constructor(message) {
     super(message);
@@ -3007,7 +2986,7 @@ var StorageUnknownError = class extends StorageError {
   }
 };
 
-// ../node_modules/@supabase/storage-js/dist/module/lib/helpers.js
+// node_modules/@supabase/storage-js/dist/module/lib/helpers.js
 var __awaiter2 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -3040,7 +3019,7 @@ var resolveFetch2 = (customFetch) => {
   if (customFetch) {
     _fetch = customFetch;
   } else if (typeof fetch === "undefined") {
-    _fetch = (...args) => import("./browser-X5MESSKR.js").then(({ default: fetch2 }) => fetch2(...args));
+    _fetch = (...args) => import("./browser-XRNNNWJB.js").then(({ default: fetch2 }) => fetch2(...args));
   } else {
     _fetch = fetch;
   }
@@ -3048,7 +3027,7 @@ var resolveFetch2 = (customFetch) => {
 };
 var resolveResponse = () => __awaiter2(void 0, void 0, void 0, function* () {
   if (typeof Response === "undefined") {
-    return (yield import("./browser-X5MESSKR.js")).Response;
+    return (yield import("./browser-XRNNNWJB.js")).Response;
   }
   return Response;
 });
@@ -3066,7 +3045,7 @@ var recursiveToCamel = (item) => {
   return result;
 };
 
-// ../node_modules/@supabase/storage-js/dist/module/lib/fetch.js
+// node_modules/@supabase/storage-js/dist/module/lib/fetch.js
 var __awaiter3 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -3157,7 +3136,7 @@ function remove(fetcher, url, body, options, parameters) {
   });
 }
 
-// ../node_modules/@supabase/storage-js/dist/module/packages/StorageFileApi.js
+// node_modules/@supabase/storage-js/dist/module/packages/StorageFileApi.js
 var __awaiter4 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -3697,13 +3676,13 @@ var StorageFileApi = class {
   }
 };
 
-// ../node_modules/@supabase/storage-js/dist/module/lib/version.js
+// node_modules/@supabase/storage-js/dist/module/lib/version.js
 var version2 = "2.7.1";
 
-// ../node_modules/@supabase/storage-js/dist/module/lib/constants.js
-var DEFAULT_HEADERS2 = { "X-Client-Info": `storage-js/${version2}` };
+// node_modules/@supabase/storage-js/dist/module/lib/constants.js
+var DEFAULT_HEADERS = { "X-Client-Info": `storage-js/${version2}` };
 
-// ../node_modules/@supabase/storage-js/dist/module/packages/StorageBucketApi.js
+// node_modules/@supabase/storage-js/dist/module/packages/StorageBucketApi.js
 var __awaiter5 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -3734,7 +3713,7 @@ var __awaiter5 = function(thisArg, _arguments, P, generator) {
 var StorageBucketApi = class {
   constructor(url, headers = {}, fetch2) {
     this.url = url;
-    this.headers = Object.assign(Object.assign({}, DEFAULT_HEADERS2), headers);
+    this.headers = Object.assign(Object.assign({}, DEFAULT_HEADERS), headers);
     this.fetch = resolveFetch2(fetch2);
   }
   /**
@@ -3875,7 +3854,7 @@ var StorageBucketApi = class {
   }
 };
 
-// ../node_modules/@supabase/storage-js/dist/module/StorageClient.js
+// node_modules/@supabase/storage-js/dist/module/StorageClient.js
 var StorageClient = class extends StorageBucketApi {
   constructor(url, headers = {}, fetch2) {
     super(url, headers, fetch2);
@@ -3890,10 +3869,10 @@ var StorageClient = class extends StorageBucketApi {
   }
 };
 
-// ../node_modules/@supabase/supabase-js/dist/module/lib/version.js
-var version3 = "2.50.0";
+// node_modules/@supabase/supabase-js/dist/module/lib/version.js
+var version3 = "2.50.3";
 
-// ../node_modules/@supabase/supabase-js/dist/module/lib/constants.js
+// node_modules/@supabase/supabase-js/dist/module/lib/constants.js
 var JS_ENV = "";
 if (typeof Deno !== "undefined") {
   JS_ENV = "deno";
@@ -3904,9 +3883,9 @@ if (typeof Deno !== "undefined") {
 } else {
   JS_ENV = "node";
 }
-var DEFAULT_HEADERS3 = { "X-Client-Info": `supabase-js-${JS_ENV}/${version3}` };
+var DEFAULT_HEADERS2 = { "X-Client-Info": `supabase-js-${JS_ENV}/${version3}` };
 var DEFAULT_GLOBAL_OPTIONS = {
-  headers: DEFAULT_HEADERS3
+  headers: DEFAULT_HEADERS2
 };
 var DEFAULT_DB_OPTIONS = {
   schema: "public"
@@ -3919,7 +3898,7 @@ var DEFAULT_AUTH_OPTIONS = {
 };
 var DEFAULT_REALTIME_OPTIONS = {};
 
-// ../node_modules/@supabase/supabase-js/dist/module/lib/fetch.js
+// node_modules/@supabase/supabase-js/dist/module/lib/fetch.js
 init_browser();
 var __awaiter6 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
@@ -3982,7 +3961,7 @@ var fetchWithAuth = (supabaseKey, getAccessToken, customFetch) => {
   });
 };
 
-// ../node_modules/@supabase/supabase-js/dist/module/lib/helpers.js
+// node_modules/@supabase/supabase-js/dist/module/lib/helpers.js
 var __awaiter7 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -4034,16 +4013,16 @@ function applySettingDefaults(options, defaults) {
   return result;
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/version.js
+// node_modules/@supabase/auth-js/dist/module/lib/version.js
 var version4 = "2.70.0";
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/constants.js
+// node_modules/@supabase/auth-js/dist/module/lib/constants.js
 var AUTO_REFRESH_TICK_DURATION_MS = 30 * 1e3;
 var AUTO_REFRESH_TICK_THRESHOLD = 3;
 var EXPIRY_MARGIN_MS = AUTO_REFRESH_TICK_THRESHOLD * AUTO_REFRESH_TICK_DURATION_MS;
 var GOTRUE_URL = "http://localhost:9999";
 var STORAGE_KEY = "supabase.auth.token";
-var DEFAULT_HEADERS4 = { "X-Client-Info": `gotrue-js/${version4}` };
+var DEFAULT_HEADERS3 = { "X-Client-Info": `gotrue-js/${version4}` };
 var API_VERSION_HEADER_NAME = "X-Supabase-Api-Version";
 var API_VERSIONS = {
   "2024-01-01": {
@@ -4054,7 +4033,7 @@ var API_VERSIONS = {
 var BASE64URL_REGEX = /^([a-z0-9_-]{4})*($|[a-z0-9_-]{3}$|[a-z0-9_-]{2}$)$/i;
 var JWKS_TTL = 6e5;
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/errors.js
+// node_modules/@supabase/auth-js/dist/module/lib/errors.js
 var AuthError = class extends Error {
   constructor(message, status, code) {
     super(message);
@@ -4166,7 +4145,7 @@ var AuthInvalidJwtError = class extends CustomAuthError {
   }
 };
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/base64url.js
+// node_modules/@supabase/auth-js/dist/module/lib/base64url.js
 var TO_BASE64URL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_".split("");
 var IGNORE_BASE64URL = " 	\n\r=".split("");
 var FROM_BASE64URL = (() => {
@@ -4328,7 +4307,7 @@ function bytesToBase64URL(bytes) {
   return result.join("");
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/helpers.js
+// node_modules/@supabase/auth-js/dist/module/lib/helpers.js
 function expiresAt(expiresIn) {
   const timeNow = Math.round(Date.now() / 1e3);
   return timeNow + expiresIn;
@@ -4392,7 +4371,7 @@ var resolveFetch4 = (customFetch) => {
   if (customFetch) {
     _fetch = customFetch;
   } else if (typeof fetch === "undefined") {
-    _fetch = (...args) => import("./browser-X5MESSKR.js").then(({ default: fetch2 }) => fetch2(...args));
+    _fetch = (...args) => import("./browser-XRNNNWJB.js").then(({ default: fetch2 }) => fetch2(...args));
   } else {
     _fetch = fetch;
   }
@@ -4580,7 +4559,7 @@ function validateUUID(str) {
   }
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/fetch.js
+// node_modules/@supabase/auth-js/dist/module/lib/fetch.js
 var __rest = function(s, e) {
   var t = {};
   for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -4734,10 +4713,10 @@ function hasSession(data) {
   return data.access_token && data.refresh_token && data.expires_in;
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/types.js
+// node_modules/@supabase/auth-js/dist/module/lib/types.js
 var SIGN_OUT_SCOPES = ["global", "local", "others"];
 
-// ../node_modules/@supabase/auth-js/dist/module/GoTrueAdminApi.js
+// node_modules/@supabase/auth-js/dist/module/GoTrueAdminApi.js
 var __rest2 = function(s, e) {
   var t = {};
   for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -5018,7 +4997,7 @@ var GoTrueAdminApi = class {
   }
 };
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/local-storage.js
+// node_modules/@supabase/auth-js/dist/module/lib/local-storage.js
 var localStorageAdapter = {
   getItem: (key) => {
     if (!supportsLocalStorage()) {
@@ -5053,7 +5032,7 @@ function memoryLocalStorageAdapter(store = {}) {
   };
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/polyfills.js
+// node_modules/@supabase/auth-js/dist/module/lib/polyfills.js
 function polyfillGlobalThis() {
   if (typeof globalThis === "object")
     return;
@@ -5073,7 +5052,7 @@ function polyfillGlobalThis() {
   }
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/lib/locks.js
+// node_modules/@supabase/auth-js/dist/module/lib/locks.js
 var internals = {
   /**
    * @experimental
@@ -5177,7 +5156,7 @@ function processLock(name, acquireTimeout, fn) {
   });
 }
 
-// ../node_modules/@supabase/auth-js/dist/module/GoTrueClient.js
+// node_modules/@supabase/auth-js/dist/module/GoTrueClient.js
 polyfillGlobalThis();
 var DEFAULT_OPTIONS = {
   url: GOTRUE_URL,
@@ -5185,7 +5164,7 @@ var DEFAULT_OPTIONS = {
   autoRefreshToken: true,
   persistSession: true,
   detectSessionInUrl: true,
-  headers: DEFAULT_HEADERS4,
+  headers: DEFAULT_HEADERS3,
   flowType: "implicit",
   debug: false,
   hasCustomAuthorizationHeader: false
@@ -7311,22 +7290,22 @@ var GoTrueClient = class _GoTrueClient {
 };
 GoTrueClient.nextInstanceID = 0;
 
-// ../node_modules/@supabase/auth-js/dist/module/AuthAdminApi.js
+// node_modules/@supabase/auth-js/dist/module/AuthAdminApi.js
 var AuthAdminApi = GoTrueAdminApi;
 var AuthAdminApi_default = AuthAdminApi;
 
-// ../node_modules/@supabase/auth-js/dist/module/AuthClient.js
+// node_modules/@supabase/auth-js/dist/module/AuthClient.js
 var AuthClient = GoTrueClient;
 var AuthClient_default = AuthClient;
 
-// ../node_modules/@supabase/supabase-js/dist/module/lib/SupabaseAuthClient.js
+// node_modules/@supabase/supabase-js/dist/module/lib/SupabaseAuthClient.js
 var SupabaseAuthClient = class extends AuthClient_default {
   constructor(options) {
     super(options);
   }
 };
 
-// ../node_modules/@supabase/supabase-js/dist/module/SupabaseClient.js
+// node_modules/@supabase/supabase-js/dist/module/SupabaseClient.js
 var __awaiter8 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {
@@ -7558,7 +7537,7 @@ var SupabaseClient = class {
   }
 };
 
-// ../node_modules/@supabase/supabase-js/dist/module/index.js
+// node_modules/@supabase/supabase-js/dist/module/index.js
 var createClient = (supabaseUrl, supabaseKey, options) => {
   return new SupabaseClient(supabaseUrl, supabaseKey, options);
 };

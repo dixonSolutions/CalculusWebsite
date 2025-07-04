@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;bb1c7dc7a535746b1abb3af62f1d41d08127ad7a5ce968df675453de6825b7ae;C:/Users/user/.cursor/calculus/calculus/src/app/components/mobile-menu/mobile-menu.component.ts"],
+  "sourcesContent": ["\n    .mobile-menu-root {\n      height: 100%;\n      background: #4338ca;\n      color: white;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n    }\n    mat-nav-list {\n      padding-top: 16px;\n      background: transparent;\n      color: white;\n    }\n    mat-nav-list a {\n      color: white;\n      display: flex;\n      align-items: center;\n      gap: 16px;\n      padding: 12px 16px;\n    }\n    mat-nav-list a mat-icon {\n      margin-right: 8px;\n      color: white;\n    }\n    .active {\n      background-color: rgba(255, 255, 255, 0.1);\n    }\n    .install-button-container {\n      padding: 16px;\n    }\n    :host ::ng-deep .install-button {\n      width: 100%;\n      justify-content: center;\n    }\n  "],
+  "mappings": ";AACI,CAAC;AACC,UAAQ;AACR,cAAY;AACZ,SAAO;AACP,WAAS;AACT,kBAAgB;AAChB,mBAAiB;AACnB;AACA;AACE,eAAa;AACb,cAAY;AACZ,SAAO;AACT;AACA,aAAa;AACX,SAAO;AACP,WAAS;AACT,eAAa;AACb,OAAK;AACL,WAAS,KAAK;AAChB;AACA,aAAa,EAAE;AACb,gBAAc;AACd,SAAO;AACT;AACA,CAAC;AACC,oBAAkB,KAAK,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE;AACxC;AACA,CAAC;AACC,WAAS;AACX;AACA,MAAM,UAAU,CAAC;AACf,SAAO;AACP,mBAAiB;AACnB;",
+  "names": []
+}

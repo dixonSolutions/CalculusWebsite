@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;56bd16465887777234aa15353d436d6d495972d61cc22ffc9e9c6c14f485f33c;C:/Users/user/.cursor/calculus/calculus/src/app/components/install-button/install-button.component.ts"],
+  "sourcesContent": ["\n    .install-button {\n      margin: 8px;\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n  "],
+  "mappings": ";AACI,CAAC;AACC,UAAQ;AACR,WAAS;AACT,eAAa;AACb,OAAK;AACP;",
+  "names": []
+}

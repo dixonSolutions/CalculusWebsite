@@ -1,0 +1,63 @@
+<div class="account-container">
+  <!-- Welcome Message -->
+  <div class="welcome-section" *ngIf="profile && !loading">
+    <div class="welcome-message">
+      {{ getWelcomeMessage() }}
+    </div>
+    <div class="sign-in-status">
+      ✅ You are successfully signed in as <strong>{{ getUserEmail() }}</strong>
+    </div>
+    <div class="sign-in-time">
+      Signed in at: {{ signInTime | date:'medium' }}
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading-section" *ngIf="loading">
+    <div class="loading-message">
+      🔄 Setting up your profile...
+    </div>
+  </div>
+
+  <!-- Profile Form -->
+  <form [formGroup]="updateProfileForm" (ngSubmit)="updateProfile()" class="form-widget" *ngIf="!loading">
+    <h3>Profile Information</h3>
+    
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="text" [value]="session.user.email" disabled class="inputField" />
+    </div>
+    
+    <div>
+      <label for="username">Username</label>
+      <input
+        id="username"
+        formControlName="username"
+        type="text"
+        class="inputField"
+        placeholder="Enter your username"
+      />
+    </div>
+    
+    <div>
+      <label for="website">Website</label>
+      <input
+        id="website"
+        formControlName="website"
+        type="url"
+        class="inputField"
+        placeholder="https://your-website.com"
+      />
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="button primary block" [disabled]="loading">
+        {{ loading ? 'Updating...' : 'Update Profile' }}
+      </button>
+
+      <button class="button secondary block" type="button" (click)="signOut()">
+        Sign Out
+      </button>
+    </div>
+  </form>
+</div> 
