@@ -1,10 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TopbarComponent } from './topbar/topbar.component';
 import { CommonModule } from '@angular/common';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
+import { SupabaseService } from './services/supabase.service';
 
 @Component({
   selector: 'app-root',
@@ -23,9 +24,9 @@ import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.compon
       </mat-sidenav>
       <mat-sidenav-content>
         <app-topbar [isRouteActive]="isRouteActive.bind(this)" [openMenu]="openMenu"></app-topbar>
-        <div class="content">
-          <router-outlet></router-outlet>
-        </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
@@ -49,18 +50,55 @@ import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.compon
     }
   `]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = '✨Master Calculus✨';
   currentRoute: string = '';
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private supabase: SupabaseService
+  ) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
       // Get the base route without query params
       this.currentRoute = event.url.split('?')[0].split('/')[1] || 'home';
+    });
+  }
+
+  async ngOnInit() {
+    // Handle authentication state changes globally
+    this.supabase.authChanges(async (event, session) => {
+      console.log('Global auth event:', event, session);
+      
+      if (event === 'SIGNED_IN' && session) {
+        console.log('User signed in successfully:', session.user.email);
+        
+        // Create or get user profile
+        try {
+          const { data: profile, error } = await this.supabase.getOrCreateProfile(session.user);
+          if (error) {
+            console.error('Error creating/getting profile:', error);
+          } else {
+            console.log('User profile ready:', profile);
+          }
+        } catch (error) {
+          console.error('Profile setup error:', error);
+        }
+        
+        // Redirect to auth page to show the welcome message
+        if (this.currentRoute !== 'auth') {
+          this.router.navigate(['/auth']);
+        }
+      } else if (event === 'SIGNED_OUT') {
+        console.log('User signed out');
+        // Optionally redirect to home or sign-in page
+        if (this.currentRoute === 'auth') {
+          this.router.navigate(['/home']);
+        }
+      }
     });
   }
 

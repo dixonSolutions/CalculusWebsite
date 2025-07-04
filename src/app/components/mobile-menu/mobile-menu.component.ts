@@ -34,6 +34,10 @@ import { InstallButtonComponent } from '../install-button/install-button.compone
           <mat-icon>assignment</mat-icon>
           <span>Practice</span>
         </a>
+        <a mat-list-item routerLink="/auth" (click)="closeMenu.emit()" [class.active]="isRouteActive('auth')">
+          <mat-icon>login</mat-icon>
+          <span>Auth</span>
+        </a>
         <div class="install-button-container">
           <app-install-button></app-install-button>
         </div>

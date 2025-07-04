@@ -1,0 +1,60 @@
+<div class="row flex-center flex">
+  <div class="col-6 form-widget" aria-live="polite">
+    
+    <!-- Success Message -->
+    <div class="success-section" *ngIf="emailSent">
+      <div class="success-icon">📧</div>
+      <h2>Check Your Email!</h2>
+      <p class="success-message">
+        We've sent a magic link to <strong>{{ signInForm.value.email }}</strong>
+      </p>
+      <p class="success-instructions">
+        Click the link in your email to sign in. The link will expire in 1 hour.
+      </p>
+      <button type="button" class="button secondary" (click)="resetForm()">
+        Send to Different Email
+      </button>
+    </div>
+
+    <!-- Sign In Form -->
+    <div *ngIf="!emailSent">
+      <h1 class="header">Welcome to Master Calculus</h1>
+      <p class="description">Sign in via magic link with your email below</p>
+      
+      <!-- Error Message -->
+      <div class="error-message" *ngIf="errorMessage">
+        ⚠️ {{ errorMessage }}
+      </div>
+      
+      <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget">
+        <div>
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            formControlName="email"
+            class="inputField"
+            [class.error]="signInForm.get('email')?.invalid && signInForm.get('email')?.touched"
+            type="email"
+            placeholder="Enter your email address"
+            [disabled]="loading"
+          />
+          <div class="field-error" *ngIf="signInForm.get('email')?.invalid && signInForm.get('email')?.touched">
+            Please enter a valid email address
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="button block" [disabled]="loading || signInForm.invalid">
+            <span *ngIf="loading">🔄 Sending Magic Link...</span>
+            <span *ngIf="!loading">✨ Send Magic Link</span>
+          </button>
+        </div>
+      </form>
+      
+      <div class="info-section">
+        <p class="info-text">
+          🔒 We'll never share your email. No password required - just click the link we send you!
+        </p>
+      </div>
+    </div>
+  </div>
+</div> 

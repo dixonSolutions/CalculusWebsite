@@ -30,10 +30,11 @@ interface NavItem {
       
       <!-- Desktop Navigation -->
       <div class="desktop-nav">
-        <a mat-button routerLink="/home" [class.active]="isRouteActive('home')">Home</a>
-        <a mat-button routerLink="/about" [class.active]="isRouteActive('about')">About</a>
-        <a mat-button routerLink="/lessons" [class.active]="isRouteActive('lessons')">Lessons</a>
-        <a mat-button routerLink="/practice" [class.active]="isRouteActive('practice')">Practice</a>
+      <a mat-button routerLink="/home" [class.active]="isRouteActive('home')">Home</a>
+      <a mat-button routerLink="/about" [class.active]="isRouteActive('about')">About</a>
+      <a mat-button routerLink="/lessons" [class.active]="isRouteActive('lessons')">Lessons</a>
+      <a mat-button routerLink="/practice" [class.active]="isRouteActive('practice')">Practice</a>
+      <a mat-button routerLink="/auth" [class.active]="isRouteActive('auth')">Auth</a>
         <app-install-button></app-install-button>
       </div>
 
